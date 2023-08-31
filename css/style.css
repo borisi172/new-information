@@ -1,76 +1,205 @@
-body{
+body {
     font-family: 'Epilogue', sans-serif;
 }
-.information{
+
+.information {
     display: flex;
-    background-color:#1555c0;
+    background-color: #ffffff;
     justify-content: center;
     align-items: center;
 }
-.information img{
+
+.information img {
     width: 180px;
 }
-.next{
+
+.next {
     font-size: 30px;
     color: white;
-    display:flex
+    display: flex
 }
-.next li{
+
+.next li {
     padding-left: 50px;
 }
-input{
+
+input {
 
     border: 1px solid blue;
     border-radius: 3px;
     font-size: 15px;
     font-weight: bold;
-    background-color:white;
+    background-color: white;
     padding: 5px;
 }
-.information form{
-    padding-left: 70px;
+
+.navicon {
+    display: none;
 }
-.science{
+
+.navicon span {
+
+    display: block;
+    width: 40px;
+    height: 3px;
+    margin: 8px 5px;
+    background-color: #ffffff;
+}
+
+.navicon.is-open span:nth-of-type(1) {
+    transform: rotate(45deg) translate(15px, 0px);
+}
+
+.navicon.is-open span:nth-of-type(2) {
+    opacity: 0;
+}
+
+.navicon.is-open span:nth-of-type(3) {
+    transform: rotate(-45deg) translate(15px, 0px);
+}
+
+
+
+
+
+
+
+
+.science {
     display: flex;
-    background-color:#f9f1d9;
+    background-color: #f9f1d9;
 }
-.main h3{
+
+.main h3 {
     padding: 10px;
     font-size: 30px;
     font-weight: bolder;
-    color:#28385deb;
+    color: #28385deb;
 }
-.main{
+
+.main {
     border-top: 2px solid #28385deb;
     padding-bottom: 30px;
 }
 
-.science123{
-    border: 2px solid  #ada8d79e;
+.science123 {
+    border: 2px solid #ada8d79e;
     padding: 20px;
-    width:100%;
+    width: 100%;
     box-sizing: border-box;
     overflow: hidden;
 }
-.science123:hover img{
-    transform: scale(1.03);
 
+.science123:hover img {
+    transform: scale(1.03);
+    
 }
-.science123:hover h2{
+
+.science123:hover h2 {
     color: red;
 }
 
 
-.science123 h2{
+.science123 h2 {
     font-size: 18px;
     font-weight: bold;
 }
 
 
- body .padding{
+body .padding {
     padding-top: 20px;
     padding-left: 100px;
     padding-right: 100px;
     padding-bottom: 100px;
     background-color: #653b3745;
- }
+}
+
+
+.social-icons-inner {
+    width: 50px;
+    display: flex;
+    margin-top: 20px;
+}
+
+.social-icons-inner div {
+    width: 20px;
+    margin-left: 20px;
+    padding: 5px;
+
+}
+.social-icons-inner div a {
+    height: auto;
+}
+.social-icons-inner div a img {
+    /* padding: 0 5px 0 5px; */
+    height: 100%;
+
+}
+
+
+    @media screen and (max-width:1024px) {
+        .navicon {
+            display: block;
+            z-index: 1;
+           background-color: #101010eb;
+        }
+    
+        nav .next {
+            display: none;
+    
+        }
+    
+        nav.is-open {
+            display: block;
+            position: fixed;
+            width: 100%;
+            left: 0%;
+            top: 0%;
+            height: 100%;
+            text-align: center;
+            font-size: 24px;
+            background-color: #9eff09c2;
+    
+    
+        }
+    
+        nav.is-open ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+    
+        nav.is-open ul li {
+            margin: 15px;
+        }
+    
+        .science {
+            display: flex;
+            background-color: #f9f1d9;
+            flex-wrap: wrap;
+            flex-direction: row;
+        }
+    
+        .information {
+            display: flex;
+            background-color: #ffffff;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            flex-direction: row;
+        }
+        
+        .information img {
+            width: 180px;
+        }
+    
+        body .padding {
+            padding-top: 5px!important;
+            padding:1px!important;
+            background-color: #653b3745!important;
+        }
+    
+    }
+  
